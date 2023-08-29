@@ -22,26 +22,21 @@ def create_gui():
     root = tk.Tk()
     root.title("Temporäre Dateien löschen")
 
-    # Fenstergröße
     window_width = 300
     window_height = 100
 
-    # Bildschirmauflösung
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
 
-    # Berechne die Position für das Fenster
     x = (screen_width - window_width) // 2
     y = (screen_height - window_height) // 2
 
-    # Setze die Position des Fensters
     root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
     button = tk.Button(root, text="Temporäre Dateien löschen", command=delete_temp_files)
     button.pack(pady=20)
 
     root.mainloop()
-
 
 if __name__ == "__main__":
     create_gui()
